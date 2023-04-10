@@ -1,5 +1,5 @@
 from typing import List
-
+import os
 
 # Single Responsibility Principle
 # separate the concerns of the class into different classes and modules
@@ -44,6 +44,11 @@ if __name__ == '__main__':
     j = Journal()
     j.add_entry('I cried today.')
     j.add_entry('I ate a bug.')
+    
     print(f'Journal entries: {j}')
-    file_name = "./src/solid_design_pattern/journal.txt"
+
+    file_name = os.path.join('./src/solid/', 'journal.txt')
+    if not os.path.exists('./src/solid/'):
+        os.makedirs('./src/solid/')
+
     PersistenceManager.save_to_file(journal=j, filename=file_name)
