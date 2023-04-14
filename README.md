@@ -1,8 +1,11 @@
-# python-design-patterns
-Modern implementation of design patterns in Python
+# Design Patterns in Python
+Discover the modern implementation of design patterns in Python. This is a practical course that will teach you how to use design patterns in Python to write clean, maintainable, and reusable code. The link to the course is below.
 
-## Table of Contents
+```Link
+https://www.udemy.com/course/design-patterns-python/
+```
 
+## Course Content and Notes
 1. SOLID Principles
    * Single Responsibility
        Make things (classes, functions, etc.) responsible for fulfilling one type of role.
