@@ -26,3 +26,8 @@ https://www.udemy.com/course/design-patterns-python/
    * Dependency Inversion
        Make classes depend on abstract classes rather than non-abstract classes.
        e.g. Make classes inherit from abstract classes.
+
+   * Link to SOLID Principles video
+        ```link
+        https://www.youtube.com/watch?v=pTB30aXS77U
+        ```
