@@ -31,3 +31,7 @@ https://www.udemy.com/course/design-patterns-python/
         ```link
         https://www.youtube.com/watch?v=pTB30aXS77U
         ```
+    * Link to SOLID principles article on realpython.com
+        ```link
+        https://realpython.com/solid-principles-python/
+        ```
