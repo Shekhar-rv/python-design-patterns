@@ -36,6 +36,11 @@ https://www.udemy.com/course/design-patterns-python/
         https://realpython.com/solid-principles-python/
         ```
 
+Another great reasource I found for design patterns in python is the following link:
+```link
+https://refactoring.guru/design-patterns/python
+```
+
 ## To setup a dev environment
 To see all the options available, run the following commands in the terminal:
 
