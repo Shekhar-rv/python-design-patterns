@@ -13,44 +13,20 @@ help:
 	@echo ""
 	@echo "Please use ${BOLD}'make <target>'${NONE}  where ${BOLD}<target>${NONE} is one of"
 	@echo ""
-	@echo "${UNDERLINE} Create a Virtual Environment: ${NONE}"
-	@echo " ${BOLD}create_virtual_env : ${GREEN} Creates the virtual directory${NONE}"
-	@echo ""
+	@echo "${UNDERLINE} build-dev-environment: ${NONE}"
+	@echo " ${BOLD}build-dev-environment : ${GREEN} Creates the Development Environment${NONE}"
 	@echo ""
 	@echo "${UNDERLINE} Upgrade and Install all dependencies: ${NONE}"
-	@echo " ${BOLD}install_dependencies : ${GREEN} Upgrading pip and installing 3rd party python dependencies${NONE}"
-	@echo ""
-	@echo ""
-	@echo "${UNDERLINE} Check verisons of python and pip: ${NONE}"
-	@echo " ${BOLD}check_py : ${GREEN} Shows the installed versions of Python and pip${NONE}"
-	@echo ""
-	@echo ""
-	@echo "${UNDERLINE} Creates a Virtual Environment and installs all dependencies: ${NONE}"
-	@echo " ${BOLD}init : ${GREEN} Creates the virtual directory${NONE}"
-	@echo ""
-	@echo ""
-	@echo "${UNDERLINE} Run the program: ${NONE}"
-	@echo " ${BOLD}run_main : ${GREEN} Runs the program (provided you have a main.py)${NONE}"
+	@echo " ${BOLD}install_open-development-environmentdependencies : ${GREEN} Opens the devcontainer${NONE}"
 	@echo ""
 
-VENV=venv
-PYTHON=$(VENV)/bin/python
-PIP=$(VENV)/bin/pip3
+# Development Environments
+build-dev-environment:
+	@echo "Building & starting the email_service local environment"
+	docker compose -f $(ROOT_DIR)/docker/dev/docker-compose.yml up --build
 
-create_virtual_env:
-	@echo Creating the virtual directory: $(VENV)
-	rm -rf $(VENV)
-	python3 -m venv $(VENV)
-
-install_dependencies:
-	@echo Upgrading pip and installing 3rd party python dependencies
-	$(PIP) install --upgrade pip
-	$(PIP) install -r requirements.txt
-
-check_py:
-	@echo Checking the Python and Pip versions in virtual environment
-	$(PYTHON) --version
-	$(PIP) --version
+open-development-environment: 
+	devcontainer open ./src
 
 init: create_virtual_env install_dependencies check_py
 

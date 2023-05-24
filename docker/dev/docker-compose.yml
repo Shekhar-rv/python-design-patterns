@@ -1,0 +1,16 @@
+version: "3.9"
+networks:
+  default:
+    name: local
+    external: false
+services:
+  python_design_patterns:
+    container_name: python_design_patterns
+    build:
+      context: ../../
+      dockerfile: ./docker/dev/Dockerfile.python_design_patterns
+    volumes:
+      - ../../:/app
+    networks:
+      - default
+    tty: true

@@ -1,0 +1,19 @@
+# INSTALL PYTHON RUNTIME ENVIRONMENT
+FROM python:3.10-bullseye
+
+# Update
+RUN apt-get update
+
+# CREATING AND SETTING THE WORKING DIRECTORY
+RUN mkdir -p /app
+WORKDIR /app
+
+# INSTALL PYTHON DEPENDANCIES
+COPY src/requirements.txt /app/src/requirements.txt
+RUN pip install --upgrade pip && pip install -r /app/src/requirements.txt
+RUN rm /app/src/requirements.txt
+
+# DEV DEPS
+RUN pip install pylint==2.16.2 sqlfluff==1.4.5 parameterized==0.9.0 pycodestyle==2.10.0 snapshottest==0.6.0
+
+ENTRYPOINT ["bash"]
