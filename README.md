@@ -35,3 +35,16 @@ https://www.udemy.com/course/design-patterns-python/
         ```link
         https://realpython.com/solid-principles-python/
         ```
+
+## To setup a dev environment
+To see all the options available, run the following commands in the terminal:
+
+```bash
+make help
+```
+
+To create and open a dev container in VS Code, run the following command in the terminal:
+
+```bash
+make open-development-environment
+```
