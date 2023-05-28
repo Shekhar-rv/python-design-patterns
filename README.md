@@ -35,21 +35,37 @@ https://www.udemy.com/course/design-patterns-python/
         ```link
         https://realpython.com/solid-principles-python/
         ```
+2. Creational Design Patterns
+    * Builder
+        * Separate the construction of a complex object from its representation so that the same construction process can create different representations.
+        ```link
+        https://refactoring.guru/design-patterns/builder
+        https://refactoring.guru/design-patterns/builder/python/example
+        ```
 
 Another great reasource I found for design patterns in python is the following link:
 ```link
 https://refactoring.guru/design-patterns/python
 ```
 
-## To setup a dev environment
-To see all the options available, run the following commands in the terminal:
+## Development Environment
 
-```bash
-make help
-```
+To run the development environment:
 
-To create and open a dev container in VS Code, run the following command in the terminal:
+1. You will need to have Docker installed on your local machine and devcontainer CLI installed on your VSCode.
+    ```
+    Ctrl + Shift + P -> Dev Containers:Install devcontainer CLI
+    ```
+2. Create and open the dev container with the following command:
 
-```bash
-make open-development-environment
-```
+    ```bash
+    make open-development-environment
+    ```
+
+3. In the dev environment, you can run the `main.py` by going to the `Run and Debug` on your left panel and clicking on the `Start Debugging` green button.
+
+4. If you make any changes to the dev environment, you can rebuild it with the following command:
+
+    ```
+    Ctrl + Shift + P -> Dev Containers:Rebuild Container Without Cache
+    ``` 
