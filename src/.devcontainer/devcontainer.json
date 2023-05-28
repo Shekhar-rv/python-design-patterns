@@ -22,7 +22,8 @@
 				"ms-python.autopep8",
 				"streetsidesoftware.code-spell-checker",
 				"mtxr.sqltools-driver-pg",
-				"Github.copilot"
+				"Github.copilot",
+				"sourcery.sourcery"
 			],
 			"settings": {
 				"liveshare.guestApprovalRequired": false,
