@@ -16,7 +16,7 @@ class Person:
 
 
 class PersonBuilder:  # facade
-    def __init__(self, person=None):
+    def __init__(self, person=None) -> None:
         self.person = Person() if person is None else person
 
     @property
