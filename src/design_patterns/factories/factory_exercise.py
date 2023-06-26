@@ -4,20 +4,31 @@
 # The id of the person should be set as a 0-based index of the object created. So, the first person the factory makes should have Id=0, second Id=1 and so on.
 
 
+from unittest import TestCase
+
+
 class Person:
-    def __init__(self, id, name):
+    def __init__(self, id: int, name: str):
         self.id = id
         self.name = name
 
 
 class PersonFactory:
-    def create_person(self, name):
-        return Person(PersonFactory.id, name)
+    id = 0
+
+    def create_person(self, name: str) -> Person:
+        p = Person(PersonFactory.id, name)
+        PersonFactory.id += 1
+        return p
 
 
-if __name__ == '__main__':
-    pf = PersonFactory()
-    p1 = pf.create_person('Chris')
-    p2 = pf.create_person('Sarah')
-    print(p1.id, p1.name)
-    print(p2.id, p2.name)
+class Evaluate(TestCase):
+    def test_exercise(self):
+        pf = PersonFactory()
+
+        p1 = pf.create_person('Chris')
+        self.assertEqual(p1.name, 'Chris')
+        self.assertEqual(p1.id, 0)
+
+        p2 = pf.create_person('Sarah')
+        self.assertEqual(p2.id, 1)
