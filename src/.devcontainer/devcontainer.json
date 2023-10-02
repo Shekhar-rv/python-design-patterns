@@ -63,28 +63,6 @@
 				},
 				"editor.defaultFormatter": "ms-python.autopep8",
 				"python.formatting.provider": "autopep8",
-				"sqltools.connections": [
-					{
-						"previewLimit": 50,
-						"server": "postgres",
-						"port": 5432,
-						"driver": "PostgreSQL",
-						"name": "postgres-integration",
-						"database": "dev",
-						"username": "postgres",
-						"password": "dev"
-					},
-					{
-						"previewLimit": 50,
-						"server": "local-db-postgres",
-						"port": 5432,
-						"driver": "PostgreSQL",
-						"name": "postgres-db-utils",
-						"database": "data_pipeline",
-						"username": "postgres",
-						"password": "dev"
-					}
-				],
 				"git.openRepositoryInParentFolders": "always",
 				"cSpell.words": []
 			}

@@ -5,9 +5,9 @@
     "python.testing.unittestArgs": [
         "-v",
         "-s",
-        "./design_patterns",
+        "./design_patterns/tests",
         "-p",
-        "*_test.py"
+        "*test*.py"
     ],
     "python.testing.pytestEnabled": false,
     "python.testing.unittestEnabled": true
