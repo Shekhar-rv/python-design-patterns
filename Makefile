@@ -9,6 +9,8 @@ WHITE=\033[01;37m
 BOLD=\033[1m
 UNDERLINE=\033[4m
 
+ROOT_DIR:=$(shell pwd)
+
 help:
 	@echo ""
 	@echo "Please use ${BOLD}'make <target>'${NONE}  where ${BOLD}<target>${NONE} is one of"
@@ -22,7 +24,7 @@ help:
 
 # Development Environments
 build-dev-environment:
-	@echo "Building & starting the email_service local environment"
+	@echo "Building & starting the python local environment"
 	docker compose -f $(ROOT_DIR)/docker/dev/docker-compose.yml up --build
 
 open-development-environment: 

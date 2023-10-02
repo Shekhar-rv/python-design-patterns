@@ -12,7 +12,7 @@
 	"customizations": {
 		"vscode": {
 			"extensions": [
-				"ms-python.python",
+				"ms-python.python@2023.8.0",
 				"ms-python.pylint",
 				"ms-python.vscode-pylance",
 				"vscode-icons-team.vscode-icons",
@@ -22,8 +22,11 @@
 				"ms-python.autopep8",
 				"streetsidesoftware.code-spell-checker",
 				"mtxr.sqltools-driver-pg",
+				"rioj7.command-variable",
+				"hediet.vscode-drawio",
 				"Github.copilot",
-				"sourcery.sourcery"
+				"ms-vscode.live-server",
+				"eamodio.gitlens"
 			],
 			"settings": {
 				"liveshare.guestApprovalRequired": false,
